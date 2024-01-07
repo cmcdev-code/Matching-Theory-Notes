@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,graphicx,mathtools,tikz,hyperref}
+\usetikzlibrary{positioning}
+\newcommand{\n}{\mathbb{N}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\q}{\mathbb{Q}}
+\newcommand{\cx}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\field}{\mathbb{F}}
+\newcommand{\ita}[1]{\textit{#1}}
+\newcommand{\com}[2]{#1\backslash#2}
+\newcommand{\oneton}{\{1,2,3,...,n\}}
+\newcommand\idea[1]{\begin{gather*}#1\end{gather*}}
+\newcommand\ef{\ita{f} }
+\newcommand\eff{\ita{f}}
+\newcommand\proofs[1]{\begin{proof}#1\end{proof}}
+\newcommand\inv[1]{#1^{-1}}
+\newcommand\setb[1]{\{#1\}}
+\newcommand\en{\ita{n }}
+\newcommand{\vbrack}[1]{\langle #1\rangle}
+
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ \hypersetup{
+ colorlinks,
+ linkcolor=blue
+ }
+\begin{document}
+\date{}
+
+
+\title{Matching Theory Notes}
+\author{Collin McDevitt}
+
+\maketitle
+
+\begin{lemma}{1.0.1}
+    For any graph, G $\alpha (G)$, $\alpha (G)+\tau(G)=|V(G)|$.
+\end{lemma}
+
+\begin{proof}
+    Let $G$ be an arbitrary graph and let $M$ be an arbitrary point cover where $|M|=\tau(G)$.
+    Then $V(G)-M$ is an independent set of points. This is true because if $V(G)-M$ was not an independent set of points then
+    there are at least two points $u,v \in V(G)-M$ where $u$ and $v$ are adjacent. If they are adjacent the line incident with $u$ and $v$ is not covered by $M$ which is a contradiction.
+    As $V(G)-M$ is an independent set of points we get the inequality $$\alpha(G) \geq |V(G)-M|= |V(G)|-\tau (G)$$
+
+    Now assume that $L$ is an arbitrary independent set of points where $|L|=\alpha(G)$. Then $V(G)-L$ is a point cover of $G$. If $V(G)-L$ is not a point cover of $G$ then there exists a line $l$ such that $l$ is not covered by $V(G)-L$. However this would imply that $l$ is incident with two points in $L$ this is a contradiction on the fact $L$ is independent points hence $V(G)-L$ is a point cover of $G$. As $V(G)-L$ is a point cover of $G$ we get
+    the inequality $$\tau(G) \leq |V(G)-L|=|V(G)|-\alpha(G)$$
+
+    Combining both inequalities we get $\alpha(G) \geq |V(G)|-\tau(G)$ and $\tau(G) \leq |V(G)|-\alpha(G)$. This implies that $$\alpha(G)+\tau(G)=|V(G)|$$.
+\end{proof}
+
+\begin{lemma}{1.0.2}
+    For any graph $G$ with no isolated points, $v(G)+\rho(G)=|V(G)|$.
+
+\end{lemma}
+
+\begin{proof}
+    Let $G$ be an arbitrary graph with no isolated points and let $C$ be a line cover of $G$ where $|C|=\rho(G)$. Let $\langle C \rangle$ be the graph formed from lines the set of lines $C$ and the set of points $V(C)$. We have that $\langle C \rangle$ is a union of stars. This is because if $\langle C \rangle$ was not a union of stars. Then there would be two points in the graph that that are adjacent two one or more point in $\langle C \rangle$. If they are adjacent to a single point then removing either of the lines incident would create a smaller minimal line cover. If they are adjacent to two or more points then removing any of the incident lines would create a smaller minimal line cover.
+    Now if we let $n$ be the number of components in $\langle C \rangle$ we get that $n=|V(G)|-\rho(G)$ which arises because in each star there is one more point than there are lines. If we take one line from each star we get a matching hence $$v(G)\geq |V(G)| - \rho(G)$$
+
+    Now let $M$ be an arbitrary matching of $G$ where $|M|=v(G)$, and $U$ be the set of points that are not covered by $M$. We get that $U$ is an independent set of points because if $U$ was not an independent set of points then there would be two points $u,v \in U$ such that $u$ and $v$ are adjacent. If $u$ and $v$ are adjacent then there is a line incident with $u$ and $v$ that is not covered by $M$ which is a contradiction. As $U$ is an independent set of points and $G$ has no isolated points we get that $|U| = |V(G)|-2v(G)$. Let $S$ be a line covering of $U$ we get that $M\cup S$ is a line covering. Then we get the inequality $$\rho (G)\leq |M \cup S|= v(G)+|V(G)|-2v(G)=|V(G)|-v(G)$$ Combining both inequalities we get $$v(G)+\rho(G)=|V(G)|$$
+\end{proof}
+
+
+
+
+\end{document}
