@@ -47,7 +47,7 @@
 \maketitle
 
 \begin{lemma}{1.0.1}
-    For any graph, G $\alpha (G)$, $\alpha (G)+\tau(G)=|V(G)|$.
+    For any graph, $G$, $\alpha (G)+\tau(G)=|V(G)|$.
 \end{lemma}
 
 \begin{proof}
@@ -75,6 +75,48 @@
 \end{proof}
 
 
+\begin{exercise}{1.0.3}
+    \text{\\}
 
+    \begin{enumerate}
+        \item A minimal line cover is minimum if and only if it contains a maximum matching.
+        \item A maximal matching is maximum if and only if it is contained in a minimum line cover.
+    \end{enumerate}
+\end{exercise}
+
+\begin{proof}{(1)}
+
+    Let $L$ be a line cover where $|L|=\rho(G)$. As $L$ is a minimum line cover
+    we have that it forms the lines from a union of stars on $G$. We have that the number of stars is $v(G)$ which comes from selecting one matching from each star. Hence $L$ contains a maximum matching.
+
+    Let $L$ be a minimal line cover that contains a maximum matching. Then as $L$ is a union of stars we get a maximum matching by selecting a line from each star. Hence $|L|=|V(G)|-v(G)=\rho(G)$ hence it is a minimum line cover.
+\end{proof}
+
+\begin{proof}{(2)}
+    Let $M$ be a maximum matching. Let $L$ be an line cover obtained by taking an arbitrary line covering of the edges incident with $V(G)-V(M)$ and $M$. We have that $|L|=|V(G)|-2v(G)+v(G)=\rho(G)$ hence $L$ contains a minimum line cover.
+
+    Let $M$ be a maximal matching that is contained in a minimum line cover $L$.
+    Then we have that the matchings in $M$ are formed from individual lines of the stars formed by $L$. Hence $|M|=V(G)-\rho(G)=v(G)$ hence $M$ is a maximum matching.
+\end{proof}
+
+
+\begin{exercise}
+    {1.0.4}
+    For any graph $G$, $v(G)\leq \tau(G)$
+\end{exercise}
+
+\begin{proof}
+
+    Let $G$ be an arbitrary graph and let $M$ be a maximum matching in $G$. As $M$ is a maximum matching we get that it is contained in a minimum line cover $L$. As $L$ is a minimum line cover we have that it is the union of stars where each matching in $M$ comes from a single line in each star. We get that the number of stars is $\tau(G)$ hence $v(G)\leq \tau(G)$
+\end{proof}
+\begin{theorem}
+    {1.1.1}
+    König's Minimax Theorem:
+    If $G$ is bipartite, then $v(G)=\tau(G)$
+\end{theorem}
+
+\begin{proof}
+    Remove lines from $G$ as long as possible while keeping $\tau(G)$ the same. Denote the resulting minimal graph by $G^\prime$. Hence $\tau(G^\prime)=\tau(G)$, but for any line $l\in E(G)$ we have $\tau(G^\prime -l)<\tau(G)$. Suppose that $G^\prime$ does not consist of independent lines. Then there are two lines $l_1, l_2 \in E(G^\prime)$ that are both incident with a point $c \in V(G^\prime)$.
+\end{proof}
 
 \end{document}
