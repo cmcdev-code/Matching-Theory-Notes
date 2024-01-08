@@ -130,7 +130,7 @@
 \end{theorem}
 
 \begin{proof}
-    Let $G$ be an arbitrary bipartite graph and let $L$ be a minimum point cover of $G$. From each point in the point cover select one line that is incident with it. Assume that this is not a matching then there are two points that are incident
+    Let $G$ be an arbitrary bipartite graph and let $L$ be a minimum point cover of $G$. Create the new graph $G^{\prime}$ by removing lines from $G$ as long as $\tau(G^\prime)=\tau(G)$. We have that $G^\prime$ consists of an independent set of lines from each of the points in the point cover $\tau(G^\prime)$ select one line. As $G^{\prime}$ consists of an independent set of lines we have a maximum matching by König's Minimax Theorem which satisfies the conclusion.
 \end{proof}
 
 
