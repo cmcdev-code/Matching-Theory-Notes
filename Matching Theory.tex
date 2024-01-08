@@ -116,7 +116,22 @@
 \end{theorem}
 
 \begin{proof}
-    Remove lines from $G$ as long as possible while keeping $\tau(G)$ the same. Denote the resulting minimal graph by $G^\prime$. Hence $\tau(G^\prime)=\tau(G)$, but for any line $l\in E(G)$ we have $\tau(G^\prime -l)<\tau(G)$. Suppose that $G^\prime$ does not consist of independent lines. Then there are two lines $l_1, l_2 \in E(G^\prime)$ that are both incident with a point $c \in V(G^\prime)$.
+    Remove lines from $G$ as long as possible while keeping $\tau(G)$ the same. Denote the resulting minimal graph by $G^\prime$. Hence $\tau(G^\prime)=\tau(G)$, but for any line $l\in E(G)$ we have $\tau(G^\prime -l)<\tau(G)$. Suppose that $G^\prime$ does not consist of independent lines. Then there are two lines $l_1, l_2 \in E(G^\prime)$ that are both incident with a point $a \in V(G^\prime)$. As $G^\prime$ is minimal we have that there exists a point cover of $G^\prime-x$ we denote this point cover by $S_x$ where $|S_x|=\tau(G^\prime)-1$. We also have the point cover $S_y$ which is covering $G^\prime -y$ with $|S_x|=|S_y|$.
+    Form the induced subgraph $G^{\prime \prime}$ of $G^\prime, \; G^{\prime \prime}=G^\prime[\{a\}\cup S_x\cup S_y \cap \overline{S_x \cap S_y}]$ and let $t=|S_x \cap S_y|$. Then we have $|V(G^{\prime \prime})|=2(\tau(G^\prime)-1 -t)+1$. As $G^{\prime \prime}$ is a subgraph of a bipartite graph we have that it is bipartite. Hence we have a set $T$ which is a point cover of $G^{\prime \prime}$ where $|T|=\tau(G^\prime)-1 -t$.
+    We claim that the set of points $T^\prime = T \cup (S_x \cap S_y)$ covers $G^\prime$. Let $z$ be a line in $G^\prime$ if $z\not = x $ or $z\not = y$ then we have that $z$ is covered by $S_x$ and $S_y$ hence it is covered by $S_x \cap S_y$ or it connects $S_x-S_y$ to $S_y-S_x$. If $z=x$ or $z=y$ then we have it is covered by $T$. So $\tau(G^\prime)\leq |T^\prime|= |T\cup (S_x\cap S_y)|=|T|+|S_x\cap S_y|\leq\tau(G^\prime)-1-t+t=\tau(G^\prime)-1$ a contradiction. Hence $G^\prime$ is an independent set of lines. Hence $$\tau(G)=\tau(G^\prime)=v(G^\prime)\leq v(G)$$
+
 \end{proof}
+
+
+\begin{theorem}
+    {1.1.2}
+
+    In any (possibly infinite) bipartite graph there exists a matching $M$ and a point cover $P$ such that every line in $M$ contains exactly one point in $P$ and every point in $P$ is contained in exactly one line of $M$.
+\end{theorem}
+
+\begin{proof}
+    Let $G$ be an arbitrary bipartite graph and let $L$ be a minimum point cover of $G$. From each point in the point cover select one line that is incident with it. Assume that this is not a matching then there are two points that are incident
+\end{proof}
+
 
 \end{document}
