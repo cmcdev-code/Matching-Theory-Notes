@@ -144,10 +144,9 @@ If $X$ is any set of points in a graph $G$, we denote the set of all points whic
 
     Let $G=(A,B)$ be a bipartite graph and suppose that there is a matching $A$ to $B$ and suppose that for some subgraph $X \subseteq A$ we have $|\Gamma(X)|<|X|$. If $X$ is any subgraph of $A$ and there exists a matching from $A$ to $B$ we have that there exists a matching from $X$ to $B$ as well. As $|\Gamma(X)|<|X|$ we have that there is at least $1$ point in $X$ that is not adjacent to any point in $B$ hence it can not be a complete matching.
 
-    Suppose $|\Gamma(X)|\geq |X|$ for all $X\subseteq A$. Then using mathematical induction on $|A|$. If $|A|=0$ then we would have a complete matching. If $|A|=1$ then by our assumption we have that $|\Gamma(A)|\geq |A|$ hence there is a matching. Now suppose that for all $X\subset A$
-
+    Suppose $|\Gamma(X)|\geq |X|$ for all $X\subseteq A$. Then using mathematical induction on $|A|$. If $|A|=0$ then we would have a complete matching. If $|A|=1$ then by our assumption we have that $|\Gamma(A)|\geq |A|$ hence there is a matching. Now suppose that for all $X \subset A,\; X\not = \emptyset, |X|< |\Gamma(X)|$ holds. Let $a\in A,b \in B$ be two adjacent points. Let $G^{\prime}= G - a - b$ and let $X$ be any subset of $A-a$. If $X = \emptyset$, then $|X|=|\Gamma_{G^\prime}(X)|$ so assume $X \not = \emptyset$. Since $X\not = A,\; |X|< |\Gamma_{G^\prime}(X)|$ based on the assumption.
 
 \end{proof}
-
+% Need to finish the theorem above and understand it better
 
 \end{document}
