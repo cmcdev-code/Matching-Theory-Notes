@@ -130,7 +130,23 @@
 \end{theorem}
 
 \begin{proof}
-    Let $G$ be an arbitrary bipartite graph and let $L$ be a minimum point cover of $G$. Create the new graph $G^{\prime}$ by removing lines from $G$ as long as $\tau(G^\prime)=\tau(G)$. We have that $G^\prime$ consists of an independent set of lines from each of the points in the point cover $\tau(G^\prime)$ select one line. As $G^{\prime}$ consists of an independent set of lines we have a maximum matching by König's Minimax Theorem which satisfies the conclusion.
+    Let $G$ be an arbitrary bipartite graph and let $L$ be a minimum point cover of $G$. Create the new graph $G^{\prime}$ by removing lines from $G$ as long as $\tau(G^\prime)=\tau(G)$. We have that $G^\prime$ consists of an independent set of lines from each of the points in the point cover $\tau(G^\prime)$ select one line. As $G^{\prime}$ consists of an independent set of lines we have a maximum matching by König's Minimax Theorem which satisfies the implication.
+\end{proof}
+
+If $X$ is any set of points in a graph $G$, we denote the set of all points which are adjacent to at least one point of $X$ as $\Gamma(X)$.
+
+\begin{theorem}
+    {1.1.3.}
+    (P. Hall's THeorem). Let $G=(A,B)$ be a bipartite graph. Then $G$ has a matching of $A$ into $B$ if and only if $|\Gamma(X)|\geq |X|$ for all $X \subseteq A$.
+\end{theorem}
+
+\begin{proof}
+
+    Let $G=(A,B)$ be a bipartite graph and suppose that there is a matching $A$ to $B$ and suppose that for some subgraph $X \subseteq A$ we have $|\Gamma(X)|<|X|$. If $X$ is any subgraph of $A$ and there exists a matching from $A$ to $B$ we have that there exists a matching from $X$ to $B$ as well. As $|\Gamma(X)|<|X|$ we have that there is at least $1$ point in $X$ that is not adjacent to any point in $B$ hence it can not be a complete matching.
+
+    Suppose $|\Gamma(X)|\geq |X|$ for all $X\subseteq A$. Then using mathematical induction on $|A|$. If $|A|=0$ then we would have a complete matching. If $|A|=1$ then by our assumption we have that $|\Gamma(A)|\geq |A|$ hence there is a matching. Now suppose that for all $X\subset A$
+
+
 \end{proof}
 
 
