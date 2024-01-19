@@ -194,4 +194,29 @@ If $X$ is any set of points in a graph $G$, we denote the set of all points whic
     Let $G$ be a graph and $M$ be a matching that is not maximum and suppose there are no augmenting paths in $G$ relative to $M$. As $M$ is not a maximum matching there exists a larger matching $M$. Create the graph $G^\prime =G[M\setminus M^{\prime} \cup M^{\prime}\setminus M]$ as this creates an alternating path and there are at least two points in $V(G^\prime)$ that are not in $V(M)$ we have an augmenting path.
 \end{proof}
 
+
+\begin{lemma}
+    {1.2.2}
+    If $G=(A,B)$ is a bipartite graph and $M$ is a matching on $G$ where
+    $A_1\subseteq A,B_1\subseteq B$ are the sets of exposed points where $F$ is the maximal forest in $G$ with the properties:
+    \begin{itemize}
+        \item For each point $b$ of $F$ has degree $2$ and of the incident lines of $b$ is in $M$.
+        \item Each component of $F$ contains a point in $A_1$.
+    \end{itemize}
+    ,then $M$ is a maximum matching if and only if no point of $B_1$ is adjacent to any point of $F$.
+
+\end{lemma}
+
+\begin{proof}
+    Assume $M$ is a maximum matching and there exists a point $b$ of $B_1$ that is adjacent to a point in $F$. Then we have an $M-augmenting$ path which by Theorem 1.2.1 implies $M$ is not a maximum matching.
+
+    Suppose that no point of $B_1$ is adjacent to any point of $F$.
+    We have $M$ covers $A\setminus V(F)\cup (B\cap V(F))$ which is immediate as $M$ covers $A$ and $B$. We have that no line of $M$ joins a point from $A\setminus (F)$ to a point of $B\cap V(F)$. As if there was then we would have both points would have to be in $V(F)$ however that would contradict $A\setminus V(F)$. Now as $M$ covers $A\setminus V(F)\cup (B\cap V(F))$ and  each line of $M$ contains exactly one single point of $A\setminus V(F)\cup (B\cap V(F))$. We have $|A\setminus V(F)\cup (B\cap V(F))|=|M|$.
+
+    Now to show that $A\setminus V(F)\cup (B\cap V(F))$ is a point cover. Suppose that it is not and there is a line $ab$ that is not covered by $A\setminus V(F)\cup (B\cap V(F))$ where $a\in A$ and $b\in B$ then we have $a\in V(F)$ and $b\not \in V(F)$. By the hypothesis we have $b\not \in B_1$ therefore the matching covers $b$ by a line $a^\prime b$. We have $a\not = a^\prime$
+
+\end{proof}
+
+
+
 \end{document}
