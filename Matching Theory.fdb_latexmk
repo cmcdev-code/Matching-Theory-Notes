@@ -1,8 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1705357989 "/home/oem/Code/Matching Theory Notes/Matching Theory.tex" "Matching Theory.pdf" "Matching Theory" 1705357990
+["pdflatex"] 1705681095 "/home/oem/Code/Matching Theory Notes/Matching Theory.tex" "Matching Theory.pdf" "Matching Theory" 1705681096
   "/etc/texmf/web2c/texmf.cnf" 1703735389 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/oem/Code/Matching Theory Notes/Matching Theory.tex" 1705357989 14085 4e61b5edc90155cca7d235f3f46d1ca9 ""
+  "/home/oem/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1705517983 14040 0e9f96dc776573864717538a63f25d3d ""
+  "/home/oem/Code/Matching Theory Notes/Matching Theory.tex" 1705681095 15836 72ccbf0bf0f9c4ab074887f4a233df95 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -161,9 +163,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1703735954 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1703735956 1405657 9b783f3d4bea17389bf3d4d38a206b72 ""
-  "Matching Theory.aux" 1705357990 686 3679e47b2b137aa430e4f1f8398129a8 "pdflatex"
-  "Matching Theory.out" 1705357990 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Matching Theory.tex" 1705357989 14085 4e61b5edc90155cca7d235f3f46d1ca9 ""
+  "Matching Theory.aux" 1705681095 686 3679e47b2b137aa430e4f1f8398129a8 "pdflatex"
+  "Matching Theory.out" 1705681095 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Matching Theory.tex" 1705681095 15836 72ccbf0bf0f9c4ab074887f4a233df95 ""
   (generated)
   "Matching Theory.aux"
   "Matching Theory.log"
